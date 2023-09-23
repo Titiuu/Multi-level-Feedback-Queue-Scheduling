@@ -10,7 +10,7 @@ struct Progm{
 	unsigned arrivetime = 0;
 	unsigned needtime = 0;
 	unsigned leftime = 0;
-};
+}; // changes
 
 struct Qu {
 	std::queue<Progm> qu;
@@ -20,41 +20,41 @@ struct Qu {
 
 class Progmlist {
 public:
-	void setsize();//ÉèÖÃ½ø³Ì¶ÓÁÐ³¤¶È
-	void init();//³õÊ¼»¯½ø³Ì¶ÓÁÐÖÐ½ø³ÌÐÅÏ¢
-	void print();//´òÓ¡µ±Ç°¶ÓÁÐÐÅÏ¢
+	void setsize();//ï¿½ï¿½ï¿½Ã½ï¿½ï¿½Ì¶ï¿½ï¿½Ð³ï¿½ï¿½ï¿½
+	void init();//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
+	void print();//ï¿½ï¿½Ó¡ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 	std::vector<Progm> prolist;
 	unsigned Size = 0;
 };
 
 class MFQS {
 public:
-	MFQS() {//³õÊ¼»¯
+	MFQS() {//ï¿½ï¿½Ê¼ï¿½ï¿½
 		for (size_t i = 0; i < Size; i++)
 		{
 			MQ[i].priority = i + 1;
 			MQ[i].timeslice = (i + 1) * 2;
 		}
 	}
-	unsigned size();//·µ»Ø·´À¡¶ÓÁÐ¼¶Êý
-	void printime();//´òÓ¡ÏµÍ³µ±Ç°Ê±¼ä
-	void getprgmlist(Progmlist prgmlist);//»ñÈ¡½ø³Ì¶ÓÁÐ
-	void start();//½«µÚÒ»¸ö½ø³ÌÈë¶Ó£¬¸üÐÂtime,ptr
-	void run();//Ö´ÐÐÖ÷Ìå
-	int check();//¼ì²éµ±Ç°¶ÓÁÐÖÐ×´Ì¬£¬È·¶¨Ó¦¸ÃÔËÐÐµÄ³ÌÐò
-	bool haveNewArrive(int qn);//ÊÇ·ñÓÐÐÂµ½´ï³ÌÐò
-	void change1(int qn);//½ø³Ìµ÷¶È1
-	void change2(int qn);//½ø³Ìµ÷¶È2
-	void handle1(unsigned arrivetime, int qn);//ÊÂ¼þ´¦Àí1
-	void handle2(int qn);//ÊÂ¼þ´¦Àí2
-	void handle3(int qn);//ÊÂ¼þ´¦Àí3
-	void refresh(Progm pgm);//¸üÐÂitfceÖÐÐÅÏ¢
-	//bool finished();//ÅÐ¶Ï½ø³Ì¶ÓÁÐÊÇ·ñÒÑ¾­ÍêÈ«Ö´ÐÐÍê±Ï
+	unsigned size();//ï¿½ï¿½ï¿½Ø·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
+	void printime();//ï¿½ï¿½Ó¡ÏµÍ³ï¿½ï¿½Ç°Ê±ï¿½ï¿½
+	void getprgmlist(Progmlist prgmlist);//ï¿½ï¿½È¡ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½
+	void start();//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½ï¿½ï¿½ï¿½time,ptr
+	void run();//Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	int check();//ï¿½ï¿½éµ±Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½È·ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ÐµÄ³ï¿½ï¿½ï¿½
+	bool haveNewArrive(int qn);//ï¿½Ç·ï¿½ï¿½ï¿½ï¿½Âµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	void change1(int qn);//ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½1
+	void change2(int qn);//ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½2
+	void handle1(unsigned arrivetime, int qn);//ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½1
+	void handle2(int qn);//ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½2
+	void handle3(int qn);//ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½3
+	void refresh(Progm pgm);//ï¿½ï¿½ï¿½ï¿½itfceï¿½ï¿½ï¿½ï¿½Ï¢
+	//bool finished();//ï¿½Ð¶Ï½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½È«Ö´ï¿½ï¿½ï¿½ï¿½ï¿½
 
 private:
-	Qu MQ[4];//¶à¼¶¶ÓÁÐÊý×é
-	unsigned Size = 4;//¶ÓÁÐ´óÐ¡
-	unsigned time = 0;//ÏµÍ³Ê±¼ä
-	Progmlist itfce;//²¶»ñ½ø³Ì¶ÓÁÐµÄ½Ó¿Ú
-	unsigned ptr = 0;//Ö¸Ïòµ±Ç°¼´½«ÒªÈë¶ÓµÄ½ø³Ì
+	Qu MQ[4];//ï¿½à¼¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	unsigned Size = 4;//ï¿½ï¿½ï¿½Ð´ï¿½Ð¡
+	unsigned time = 0;//ÏµÍ³Ê±ï¿½ï¿½
+	Progmlist itfce;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ÐµÄ½Ó¿ï¿½
+	unsigned ptr = 0;//Ö¸ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ÓµÄ½ï¿½ï¿½ï¿½
 };
