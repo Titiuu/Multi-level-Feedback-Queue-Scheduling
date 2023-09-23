@@ -3,7 +3,7 @@
 using namespace std;
 
 int main()
-{
+{// make a change
 	Progmlist list;
 	list.setsize();
 	list.init();
@@ -11,6 +11,6 @@ int main()
 	mfqs.getprgmlist(list);
 	mfqs.start();
 	mfqs.run();
-	cout << "\n½ø³ÌÖ´ĞĞÍê±Ï£¡";
+	cout << "\nï¿½ï¿½ï¿½ï¿½Ö´ï¿½ï¿½ï¿½ï¿½Ï£ï¿½";
 	return 0;
-}
+}// make changes
